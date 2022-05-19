@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예시</title>
+</head>
+<body>
+		<!-- 중괄호 두 개로 서버에서 받는 값을 표시할 수 있습니다. -->
+    <p>{{ hello }}</p>
+		{% if hello == "Hello World" %}
+		<p>반갑습니다.</p>
+		{% endif %} <!-- if문 종료 -->
+		<div>
+		<!-- 이제 리스트를 표시 해 보겠습니다. -->
+		{% for item in items %} <!-- for <A> in <B>는 리스트 <B>의 각각의 값을 반복하여
+																 변수 <A>에 저장한다는 것을 의미합니다.-->
+		  <!--위에서 말씀 드렸다시피, items의 각각의 값이 item 변수에 저장되었음을 알 수 있습니다.
+					이제 각각의 값을 html에 표시합니다.-->
+			<li>{{ item }}</li>
+		<!-- endfor을 통해 반복문이 끝났음을 반드시 써야 합니다. -->
+		{% endfor %}
+		</div>
+		<p>{{object.a}} {{object.b}}</p> <!-- 오브젝트의 값은 다음과 같이 표시합니다 -->
+</body>
+</html>	
